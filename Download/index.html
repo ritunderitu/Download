@@ -1,4 +1,69 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kirika Fish Steaks - Fresh fish delivery in Langata. Get quality fish steaks and parts at Ksh 1500/kg, delivered to your door." />
+  <meta name="keywords" content="Kirika Fish Steaks, Fish Delivery Langata, Fish Parts, Bodaboda Delivery, Fresh Fish Nairobi" />
+  <meta name="author" content="Kirika Fish Steaks" />
+  <title>Kirika Fish Steaks - Langata Delivery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="relative h-[60vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1655654107324-cb97a2d46dbf?auto=format&fit=crop&w=1470&q=80');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <h1 class="text-4xl font-bold mb-2">Kirika Fish Steaks</h1>
+        <p class="text-xl">Quality Fish Delivery from Langata</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-10 px-4 bg-white">
+    <h2 class="text-2xl font-bold text-center mb-6">Choose Your Fish</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-gray-100 p-4 rounded-lg shadow">
+        <img src="https://images.unsplash.com/photo-1617191517000-f208fb37d21a?auto=format&fit=crop&w=800&q=80" class="rounded mb-4" alt="Fish Steaks">
+        <h3 class="text-xl font-semibold">Fish Steaks</h3>
+        <p class="text-lg font-bold mt-2">Ksh 1500/kg</p>
+        <input type="number" placeholder="Enter kg" class="mt-2 p-2 w-full rounded border" id="steaks">
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow">
+        <img src="https://images.unsplash.com/photo-1610973324603-90637c1f5b68?auto=format&fit=crop&w=800&q=80" class="rounded mb-4" alt="Fish Fillets">
+        <h3 class="text-xl font-semibold">Fish Fillets</h3>
+        <p class="text-lg font-bold mt-2">Ksh 1500/kg</p>
+        <input type="number" placeholder="Enter kg" class="mt-2 p-2 w-full rounded border" id="fillets">
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow">
+        <img src="https://images.unsplash.com/photo-1626206690076-ffbb25b342a1?auto=format&fit=crop&w=800&q=80" class="rounded mb-4" alt="Fish Heads">
+        <h3 class="text-xl font-semibold">Fish Heads</h3>
+        <p class="text-lg font-bold mt-2">Ksh 1500/kg</p>
+        <input type="number" placeholder="Enter kg" class="mt-2 p-2 w-full rounded border" id="heads">
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <button onclick="orderOnWhatsApp()" class="bg-green-600 text-white px-6 py-2 rounded-full text-lg hover:bg-green-700">Add to Cart & WhatsApp Order</button>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p class="text-xl font-semibold">Kirika Fish Steaks</p>
+    <p>Langata, Nairobi</p>
+    <p>Call or WhatsApp: <a href="https://wa.me/254757707781" class="text-green-400">0757707781</a></p>
+  </footer>
+
+  <script>
+    function orderOnWhatsApp() {
+      const steaks = document.getElementById('steaks').value || 0;
+      const fillets = document.getElementById('fillets').value || 0;
+      const heads = document.getElementById('heads').value || 0;
+      const total = (parseInt(steaks) + parseInt(fillets) + parseInt(heads)) * 1500;
+      const message = `Hi! I want to order:\n- Fish Steaks: ${steaks}kg\n- Fish Fillets: ${fillets}kg\n- Fish Heads: ${heads}kg\nTotal: Ksh ${total}`;
+      window.open(`https://wa.me/254757707781?text=${encodeURIComponent(message)}`, '_blank');
+    }
+  </script>
+</body>
+</html> html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
